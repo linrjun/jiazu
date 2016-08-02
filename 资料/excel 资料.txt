@@ -1,0 +1,8 @@
+时间实时变化
+
+例中假设公式在A1单元格，设成宏名称为test
+
+Sub test()
+Application.OnTime Now + TimeValue("00:00:01"), "test"
+Worksheets("Sheet1").Range("A1").Calculate
+End Sub
